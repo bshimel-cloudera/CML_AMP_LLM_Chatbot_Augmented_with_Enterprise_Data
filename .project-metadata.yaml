@@ -13,14 +13,14 @@ runtimes:
     edition: Nvidia GPU
 
 tasks:
-  - type: run_session
-    name: Validate GPU Availibility
-    script: 0_session-resource-validation/check_gpu_resources.py
-    short_summary: Check for GPU availibility. 
-    long_summary: Check GPUs are enabled on this workspace and are currently schedulable.
-    kernel: python3
-    cpu: 2
-    memory: 4
+  # - type: run_session
+  #   name: Validate GPU Availibility
+  #   script: 0_session-resource-validation/check_gpu_resources.py
+  #   short_summary: Check for GPU availibility. 
+  #   long_summary: Check GPUs are enabled on this workspace and are currently schedulable.
+  #   kernel: python3
+  #   cpu: 2
+  #   memory: 4
   
   - type: run_session
     name: Validate GPU Capability
