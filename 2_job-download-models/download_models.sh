@@ -18,6 +18,22 @@ download_lfs_files () {
     done
 }
 
+# Directory to check
+source_dir="/setup/models"
+
+# Desired link name in home directory
+link_name="models"
+
+# Check if source directory exists and is a directory
+if [ -d "$source_dir" ]; then
+    # Create the link in your home directory
+    ln -s "$source_dir" "$HOME/$link_name"
+    echo "Link created: $HOME/$link_name -> $source_dir"
+    exit
+else
+    echo "Source directory '$source_dir' does not exist or is not a directory"
+fi
+
 # Clear out any existing checked out models
 rm -rf ./models
 mkdir models
